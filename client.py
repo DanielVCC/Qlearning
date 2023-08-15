@@ -48,10 +48,11 @@ for line in f:
 
 actions = ['left', 'right', 'jump']
 
-epsilon = 0.4 # precentagem de vezes que o agente tomara a melhor decisão baseada na Q table
-gamma = 0.9
-alpha = 0.25
-current_state = 0 #inicializando o estado inical, terá que refletir o estado inicial antes do inicio do aprendizado
+epsilon = 0.4 # porcentagem de vezes que o agente tomara a melhor decisão baseada na Q table
+gamma = 0.9 # variavel para equação de belman, define o peso utilidade esperado da melhor acao possivel no proximo estado
+alpha = 0.25 # define o peso do novo valor calculado na equacao de belman em relacao ao historico de acoes
+plataforma_inicial = 0
+current_state = plataforma_inicial * 4 #inicializando o estado inical, terá que refletir o estado inicial antes do inicio do aprendizado
 
 # inicia o aprendizado por reforço
 for test in range(1000):
